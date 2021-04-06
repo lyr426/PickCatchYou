@@ -14,6 +14,7 @@ app.config['JSON_AS_ASCII'] = False
 
 @app.route('/')
 def index():
+    print(1)
     return render_template('index.html')
 
 
