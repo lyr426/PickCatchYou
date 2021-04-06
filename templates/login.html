@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="static/js/main.js"></script>
+
+<body>
+<div>
+<form>
+  <input checked="<%= true %>" id="signin" name="action" type="radio" value="signin"></input>
+  <label for="signin">Sign in</label>
+  <input id="signup" name="action" type="radio" value="signup"></input>
+  <label for="signup">Sign up</label>
+
+  <div id="wrapper">
+    <div id="arrow"></div>
+    <input id="prof" type="checkbox"></input>
+    <label for="prof"> Professor</label>
+    <input id="stu_id" placeholder="Student ID" type="text"></input>
+    <input id="pass" placeholder="Password" type="password"></input>
+    <input id="repass" placeholder="Repeat password" type="password"></input>
+  </div>
+  <button type="submit">
+    <span>
+      Sign in
+      <br/>
+      Sign up
+    </span>
+  </button>
+</form>
+</div>
+</body>
+
+{% endblock %}

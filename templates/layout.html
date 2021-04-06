@@ -1,0 +1,77 @@
+
+<html lang="kr">
+    <head>
+      <meta charset="utf-8">
+   
+      <title>PickCatchYou</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <script src="//code.jquery.com/jquery-3.4.1.min.js"></script> <!-- jquery 사용 -->
+      <script src="static/js/main.js"></script> 
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      
+    </head>
+
+<body class="hero-anime">	
+
+	<div class="navigation-wrap bg-light start-header start-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md navbar-light">
+					
+						<a class="navbar-brand" href="{{ url_for('index') }}" target="_blank">Pick Catch You</a>
+						
+						<div class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					
+						
+						<div class="col">
+							<div class="con">
+							  <div class="bar top"></div>
+							  <div class="bar middle"></div>
+							  <div class="bar bottom"></div>
+							</div>
+						  </div></div>  
+						
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{{ url_for('index') }}">Examination</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{{ url_for('login') }}">Login</a>
+								</li>
+								<!--  드롭다운 메뉴
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">시험 목록</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Capstone 디자인</a>
+										<a class="dropdown-item" href="#">딥 러닝</a>
+										<a class="dropdown-item" href="#">과학사</a>
+										<a class="dropdown-item" href="#">컴퓨터구조 및 운영체제</a>
+									</div>
+								</li>
+								-->
+
+							</ul>
+						</div>
+						
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+    <main role="main">
+    <!-- Main content block -->
+    {% block content %}{% endblock %}
+    
+    </main>
+
+
+</html>
